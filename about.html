@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Navbar Javascript</title>
+    <style>
+        .navbar{
+            background-color: rebeccapurple;
+            padding: 20px;
+            text-align: center;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin-right: 30px;
+        }
+        .active{
+            background-color: red;
+            padding: 10px 20px;
+            color: wheat !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <h1>About Page</h1>
+
+    <script>
+        var item = document.querySelectorAll("a");
+        var currentLocation = location.href;
+        for( var i=0; i<item.length; i++){
+            if(item[i].href == currentLocation){
+                item[i].className = "active"
+            }
+        }
+    </script>
+</body>
+</html>
